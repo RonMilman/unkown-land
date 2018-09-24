@@ -1,18 +1,18 @@
 import os
 import pickle
 
-def load(player):
-    data = {} # hm?
-    filename = get_full_path(player)
 
+def load(player):
     try:
         if os.path.exists(filename):
             with open(filename, 'rb') as fin:  # fin = file input
                 loaded = pickle.load(fin)
         return loaded
+    
     except TypeError:
         print("File failed to load! Threw a TypeError")
         return None
+    
     except:
         print("File failed to load! And the developer was too lazy to add any clause here so go ask him what broke. Leave a bug report on Github!")
 
