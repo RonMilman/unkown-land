@@ -44,7 +44,7 @@ def save(player):
     # print("..... saving: {}".format(player.name))
 
     with open(filename, "wb") as fout:
-        pickle.dump(player, fout
+        pickle.dump(player, fout)
 
     print("Saved!")
 
